@@ -6,10 +6,10 @@
 export const SITE_METADATA = {
     title: 'Sean\'s personal site',
     headerTitle: 'Sean O\'Hagan',
-    description: 'hiii description A blog created with Astro and Tailwind.css',
+    description: 'An academic personal site created with astro and tailwind',
     language: 'en-us',
     theme: 'system', // Options: system, light, dark, Does not work yet
-    siteUrl: 'https://astro-starter-blog.yon.fun/',
+    siteUrl: 'https://seanohagan.com/',
     siteRepo: 'https://github.com/seanohagan/seanohagan.github.io',
     siteLogo: '/static/images/logo.png',
     socialBanner: '/static/images/twitter-card.png',
@@ -19,12 +19,12 @@ export const SITE_METADATA = {
     // This project provide a default author content see src/content/authors/default.mdx, so these details are better to be inserted there.
     author: 'Sean O\'Hagan',
     //mastodon: 'https://mastodon.social/@mastodonuser',
-    email: 'address@yoursite.com',
-    github: 'https://github.com',
-    twitter: 'https://twitter.com/Twitter',
+    email: 'seanohagan@uchicago.edu',
+    github: 'https://github.com/seanohagan',
+    twitter: 'https://twitter.com/seanohagann',
     //facebook: 'https://facebook.com',
     //youtube: 'https://youtube.com',
-    //linkedin: 'https://www.linkedin.com',
+    linkedin: 'https://www.linkedin.com/in/sean-c-ohagan',
 
     // These are not supported yet
     // analytics: {
