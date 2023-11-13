@@ -10,7 +10,7 @@ export const SITE_METADATA = {
     language: 'en-us',
     theme: 'system', // Options: system, light, dark, Does not work yet
     siteUrl: 'https://astro-starter-blog.yon.fun/',
-    siteRepo: 'https://github.com/wanoo21/tailwind-astro-starting-blog',
+    siteRepo: 'https://github.com/seanohagan/seanohagan.github.io',
     siteLogo: '/static/images/logo.png',
     socialBanner: '/static/images/twitter-card.png',
     locale: 'en-US',
@@ -104,8 +104,8 @@ export const ITEMS_PER_PAGE = 5;
 
 export const NAVIGATION = [
     {href: '/', title: 'Home'},
-    {href: '/blog', title: 'Blog'},
+    // {href: '/blog', title: 'Blog'},
     // {href: '/tags', title: 'Tags'},
-    {href: '/projects', title: 'Projects'},
-    {href: '/about', title: 'About'},
+    // {href: '/projects', title: 'Projects'},
+    // {href: '/about', title: 'About'},
 ]

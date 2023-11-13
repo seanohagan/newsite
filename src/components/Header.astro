@@ -4,6 +4,8 @@ import HeaderLink from './HeaderLink.astro';
 import Logo from './Logo.astro';
 import MobileNav from "./MobileNav.astro";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
+
+import SeanLogo from './SeanLogo.astro';
 ---
 
 <header class="flex items-center justify-between py-10">
@@ -11,7 +13,7 @@ import ThemeSwitcher from "./ThemeSwitcher.astro";
         <a href="/" aria-label={SITE_METADATA.headerTitle}>
             <div class="flex items-center justify-between">
                 <div class="mr-3">
-                    <Logo/>
+                    <SeanLogo/>
                 </div>
                 {typeof SITE_METADATA.headerTitle === 'string' ? (
                         <div class="hidden h-6 text-2xl font-semibold sm:block">
