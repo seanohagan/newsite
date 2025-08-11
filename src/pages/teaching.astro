@@ -1,0 +1,71 @@
+---
+import RootLayout from "@/layouts/RootLayout.astro";
+
+const teachingData = [
+    {
+        title: 'Modern Methods in Applied Statistics',
+        role: 'Teaching Assistant',
+        quarter: ['Spring 2024', 'Spring 2025'],
+        description: 'Final course in the PhD applied statistics sequence. Topics: graphical models, HMMs, mixture models, EM, variational EM, MCMC, particle filtering, Kalman filter, Markov random fields, decomposable graphs, message passing algorithms, Bayesian regression'
+    },
+    {
+        title: 'Generalized Linear Models', 
+        role: 'Teaching Assistant',
+        quarter: 'Winter 2023',
+        description: 'Second course in the PhD applied statistics sequence. Topics: generalized linear models, exponential family, quasi-likelihood, robust estimation, penalized GLM, mixed effect models, survival analysis'
+    },
+    {
+        title: 'Applied Linear Statistical Methods', 
+        role: 'Teaching Assistant',
+        quarter: 'Autumn 2023',
+        description: 'First course in the PhD applied statistics sequence. Topics: linear regression, factor models, factorial design, randomization, categorical inputs, categorical responses'
+    },
+    {
+        title: 'Statistical Methods and Applications', 
+        role: 'Teaching Assistant',
+        quarter: ['Winter 2022', 'Autumn 2023'],
+        description: 'Introductory undergraduate course in statistics. Topics: exploratory data analysis, visualization, random variation and sampling, basic probability, random variables, expectation and variance, confidence intervals, significance tests for means and proportions, chi-square tests, linear regression'
+    },
+    {
+        title: 'Elementary Statistics', 
+        role: 'Teaching Assistant',
+        quarter: ['Spring 2022', 'Winter 2025'],
+        description: 'Introductory undergraduate course in statistics. Topics: exploratory data analysis, sampling, analysis of means and proportions, linear association, effective and fallacious uses of statistics'
+    },
+
+]
+---
+
+<RootLayout title="Teaching">
+    <div class="divide-y divide-gray-200 dark:divide-gray-700">
+        <div class="space-y-2 pb-4 pt-6">
+            <h1 class="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+                Teaching
+            </h1>
+            <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
+                Courses where I have served as a teaching assistant.
+            </p>
+        </div>
+        <div class="container py-6">
+            <div class="space-y-4">
+                {teachingData.map((course) => (
+                    <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-4">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">
+                                    {course.title}
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                    {Array.isArray(course.quarter) ? course.quarter.join(' • ') : course.quarter}
+                                </p>
+                                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                                    {course.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</RootLayout>

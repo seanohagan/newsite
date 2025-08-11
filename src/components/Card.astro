@@ -11,30 +11,33 @@ interface Astro {
 
 const {title, description, imgSrc, href} = Astro.props;
 ---
-<div class="md max-w-[544px] p-4 md:w-1/2">
-    <div class:list={`${imgSrc && 'h-full'} overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}>
-        {imgSrc &&
-            (href ? (
+<div class="p-2 w-full">
+    <div class="overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700 flex flex-col md:flex-row">
+        {imgSrc && (
+            <div class="md:w-2/5 flex-shrink-0">
+                {href ? (
                     <Link href={href} aria-label={`Link to ${title}`}>
                         <Image
-                                alt={title}
-                                src={imgSrc}
-                                class="object-cover object-center"
-                                width={544}
-                                height={306}
-                        />
-                    </Link>
-            ) : (
-                    <Image
                             alt={title}
                             src={imgSrc}
-                            class="object-cover object-center"
-                            width={544}
-                            height={306}
+                            class="object-contain object-center w-full h-full"
+                            width={500}
+                            height={300}
+                        />
+                    </Link>
+                ) : (
+                    <Image
+                        alt={title}
+                        src={imgSrc}
+                        class="object-cover object-center w-full h-full"
+                        width={500}
+                        height={300}
                     />
-            ))}
-        <div class="p-6">
-            <h2 class="mb-3 text-2xl font-bold leading-8 tracking-tight">
+                )}
+            </div>
+        )}
+        <div class="p-4 flex-1">
+            <h2 class="mb-2 text-2xl font-bold leading-8 tracking-tight">
                 {href ? (
                         <Link href={href} aria-label={`Link to ${title}`}>
                             {title}
@@ -43,7 +46,7 @@ const {title, description, imgSrc, href} = Astro.props;
                     title
                 )}
             </h2>
-            <p class="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+            <p class="prose mb-2 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
             {href && (
                     <Link
                             href={href}

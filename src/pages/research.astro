@@ -4,8 +4,20 @@ import RootLayout from "@/layouts/RootLayout.astro";
 
 const projectsData = [
     {
+        title: 'Generative Regression with IQ-BART',
+        description: `IQ-BART is a generalized Bayesian inference procedure targeting the conditional quantile function as the parameter of interest. We use a sum-of-trees prior over the conditional quantile function. The IQ-BART posterior allows for uncertainty quantification about a nonparametric conditional model, separating aleatoric and epistemic uncertainty in the response variable.`,
+        imgSrc: '/static/images/iq_bart.png',
+        href: 'https://arxiv.org/abs/2507.04168',
+    },
+    {
+        title: 'AI-Powered Bayesian Inference',
+        description: `We develop a framework to leverage predictive systems (i.e. large language models) to elicit informative priors for Bayesian statistical analyses on risk minimizers. This can result in significantly smaller credible intervals when the predictions are good. We also describe a calibration method to tune the influence of the learned prior.`,
+        imgSrc: '/static/images/ai_bayes_card.png',
+        href: 'https://arxiv.org/abs/2502.19231',
+    },
+    {
         title: 'Adaptive Uncertainty Quantification for Generative AI',
-        description: `Modern deep learning paradigms function as a black-box and do not expose their training data to the end user. We develop a novel framework for conformal prediction that adapts based on the calibration data directly, circumventing the need for further data splitting or access of the training data.`,
+        description: `Modern deep learning paradigms function as a black-box and do not expose their training data to the end user. We develop a conformal prediction method that adapts based on the calibration data directly, circumventing the need for further data splitting or access of the training data.`,
         imgSrc: '/static/images/adaptive_uq_card.png',
         href: 'https://arxiv.org/abs/2408.08990',
     },
@@ -17,10 +29,7 @@ const projectsData = [
     },
     {
         title: 'Measurement in the Age of LLMs',
-        description: `Much of social science is centered around terms like “ideology” or “power”, which generally
-        elude precise definition, and whose contextual meanings are trapped in surrounding language. This
-        paper explores the use of large language models (LLMs) to flexibly navigate the conceptual clutter
-        inherent to social scientific measurement tasks. We elicit ideological scales of both legislators and text, which accord closely to established methods and our own judgement.`,
+        description: `Much of social science is centered around terms like "ideology" or "power", which generally elude precise definition, and whose contextual meanings are trapped in surrounding language. We employ LLMs to flexibly navigate the conceptual clutter inherent to social scientific measurement tasks. We elicit ideological scales of both legislators and text, which accord closely to established methods and our own judgement.`,
         imgSrc: '/static/images/measurement_card.png',
         href: 'https://arxiv.org/abs/2312.09203',
     },
@@ -29,16 +38,16 @@ const projectsData = [
 
 <RootLayout title="Research">
     <div class="divide-y divide-gray-200 dark:divide-gray-700">
-        <div class="space-y-2 pb-8 pt-6 md:space-y-5">
-            <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <div class="space-y-2 pb-4 pt-6">
+            <h1 class="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
                 Research
             </h1>
             <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-                I am broadly interested in uncertainty quantification. To this end, I have worked on computational methods for accelerating Bayesian inference in simulator based models, and locally adaptive conformal prediction methods for deep learning models.
+                Below are short descriptions of research projects that I've had the pleasure of working on.
             </p>
         </div>
-        <div class="container py-12">
-            <div class="-m-4 flex flex-wrap">
+        <div class="container py-6">
+            <div class="space-y-2 max-w-6xl mx-auto">
                 {projectsData.map((d) => (
                         <Card title={d.title} description={d.description} imgSrc={d.imgSrc} href={d.href}/>
                 ))}
