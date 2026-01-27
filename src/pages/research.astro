@@ -8,30 +8,35 @@ const projectsData = [
         description: `IQ-BART is a generalized Bayesian inference procedure targeting the conditional quantile function as the parameter of interest. We use a sum-of-trees prior over the conditional quantile function. The IQ-BART posterior allows for uncertainty quantification about a nonparametric conditional model, separating aleatoric and epistemic uncertainty in the response variable.`,
         imgSrc: '/static/images/iq_bart.png',
         href: 'https://arxiv.org/abs/2507.04168',
+        status: 'Revision submitted at JASA.',
     },
     {
         title: 'AI-Powered Bayesian Inference',
         description: `We develop a framework to leverage predictive systems (i.e. large language models) to elicit informative priors for Bayesian statistical analyses on risk minimizers. This can result in significantly smaller credible intervals when the predictions are good. We also describe a calibration method to tune the influence of the learned prior.`,
         imgSrc: '/static/images/ai_bayes_card.png',
         href: 'https://arxiv.org/abs/2502.19231',
+        status: 'Under review.',
     },
     {
         title: 'Adaptive Uncertainty Quantification for Generative AI',
         description: `Modern deep learning paradigms function as a black-box and do not expose their training data to the end user. We develop a conformal prediction method that adapts based on the calibration data directly, circumventing the need for further data splitting or access of the training data.`,
         imgSrc: '/static/images/adaptive_uq_card.png',
         href: 'https://arxiv.org/abs/2408.08990',
+        status: 'Under review.',
     },
     {
         title: 'Tree Bandits for Generative Bayes',
         description: `We develop a self-aware framework for likelihood-free Bayesian inference that learns from past trials and errors. We apply recursive partitioning classifiers on the ABC lookup table to sequentially refine high-likelihood regions into boxes, each of which is regarded as an arm in a binary bandit problem treating ABC acceptance as a reward.`,
         imgSrc: '/static/images/tree_abc_card.png',
         href: 'https://arxiv.org/abs/2404.10436',
+        status: 'Revision submitted at JASA.',
     },
     {
         title: 'Measurement in the Age of LLMs',
         description: `Much of social science is centered around terms like "ideology" or "power", which generally elude precise definition, and whose contextual meanings are trapped in surrounding language. We employ LLMs to flexibly navigate the conceptual clutter inherent to social scientific measurement tasks. We elicit ideological scales of both legislators and text, which accord closely to established methods and our own judgement.`,
         imgSrc: '/static/images/measurement_card.png',
         href: 'https://arxiv.org/abs/2312.09203',
+        status: 'Revision in progress.',
     },
 ]
 ---
@@ -49,7 +54,7 @@ const projectsData = [
         <div class="container py-6">
             <div class="space-y-2 max-w-6xl mx-auto">
                 {projectsData.map((d) => (
-                        <Card title={d.title} description={d.description} imgSrc={d.imgSrc} href={d.href}/>
+                        <Card title={d.title} description={d.description} imgSrc={d.imgSrc} href={d.href} status={d.status}/>
                 ))}
             </div>
         </div>
